@@ -1,6 +1,7 @@
 import { MouseEvent, useLayoutEffect, useState } from "react"
 import { TextsContainer } from "./components/texts-container";
 import { IllustrationsContainer } from "./components/illustrations-container";
+import { Credits } from "./components/credits";
 
 function App() {
   const [clipPathLeftValue, setClipPathLeftValue] = useState('100px');
@@ -31,6 +32,7 @@ function App() {
       </div>
       {/* white theme  */}
       <section className="absolute inset-0 bg-white grid grid-cols-2">
+        <Credits />
         <TextsContainer theme="light" />
         <IllustrationsContainer theme="light" />
       </section>
@@ -45,6 +47,7 @@ function App() {
           style={{ transform: `translateX(${clipPathLeftValue})` }}
           className="absolute left-0  top-0 h-full w-1 cursor-w-resize z-50" 
         />
+        <Credits />
         <TextsContainer theme="dark" />
         <IllustrationsContainer theme="dark" />
       </section>
